@@ -11,7 +11,17 @@ public class Example {
         String str;
 
 
+
+
+        Scanner in = new Scanner(System.in);
+        String inputData = in.nextLine();
+        in.close();
         File inputFile = new File("G:\\projects\\javaExample\\javaExampleForBook\\src\\example_1000\\input.txt");
+
+        FileWriter inputWritter = new FileWriter(inputFile);
+        inputWritter.write(inputData);
+        inputWritter.close();
+
         FileReader fin = new FileReader(inputFile);
         Scanner sc = new Scanner(fin);
         str = sc.nextLine();
