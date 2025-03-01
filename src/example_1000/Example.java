@@ -4,6 +4,12 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Example {
+
+    public void example_1(){
+
+    }
+
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String a_Str = in.nextLine();
