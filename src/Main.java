@@ -1,9 +1,7 @@
-import chapters.chapter1.*;
 import effectiveJava_Example.chapter1_object.*;
 import example_1000.Example;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 import static effectiveJava_Example.chapter1_object.NyPizza.Size.SMALL;
 import static effectiveJava_Example.chapter1_object.Pizza.Topping.*;
@@ -15,7 +13,7 @@ public class Main {
         Calzone calzone = new Calzone.Builder().addTopping(HAM).sauceInside().build();
 
         Example example = new Example();
-        example.example_2();
+        example.example_6();
 //        char[] arr = "1234567891".toCharArray();
 //        for (char c : arr) {
 //            System.out.println(Character.getNumericValue(c));

@@ -84,29 +84,52 @@ public class Example {
     }
 
 
-    public static void main(String[] args) {
-
-
+    // Белочка собрала в лесу N шишек c орешками. Белочка очень привередливо выбирала шишки,
+    // и брала только те, в которых ровно M орешков. Также известно, что для пропитания зимой ей необходимо не менее K орешков.
+    // Определите, хватит ли на зиму орешков белочке.
+    public static void example_6() throws IOException {
+        String nStr, mStr, kStr;
         Scanner in = new Scanner(System.in);
-        String a_Str = in.nextLine();
-        String b_Str = in.nextLine();
+        nStr = in.nextLine();
+        mStr = in.nextLine();
+        kStr = in.nextLine();
         in.close();
+        FileWriter writer = new FileWriter("G:\\projects\\javaExample\\javaExampleForBook\\src\\example_1000\\example3_input.txt");
 
-        int a = Integer.parseInt(a_Str);
-        int b = Integer.parseInt(b_Str);
+        String inputString = nStr + mStr + kStr;
+        writer.write(inputString);
+        writer.close();
 
-        String oper;
+        FileReader reader = new FileReader("G:\\projects\\javaExample\\javaExampleForBook\\src\\example_1000\\example3_input.txt");
+        Scanner sc = new Scanner(reader);
+        String str = sc.nextLine();
+        sc.close();
+        List<String> bufferString = new ArrayList<>();
 
-        if (a > b) {
-            oper = ">";
-            System.out.println(oper);
-        } else if (a < b) {
-            oper = "<";
-            System.out.println(oper);
+        char[] values = str.toCharArray();
+        int n = values.length;
+        switch (n) {
+            case (4):
+                bufferString.add(new StringBuffer().append(values[2]).append(values[3]).toString());
+
+            case (3):
+                bufferString.add(new StringBuffer().append(values[2]).toString());
+        }
+
+        int n_int = Integer.parseInt(String.valueOf(values[0]));
+        int m_int = Integer.parseInt(String.valueOf(values[1]));
+        int k_int = Integer.parseInt(bufferString.get(0).toString());
+
+        FileWriter fileWriter = new FileWriter("G:\\projects\\javaExample\\javaExampleForBook\\src\\example_1000\\example_3_output.txt");
+
+        if (k_int > n_int * m_int) {
+            fileWriter.write("NO");
+            fileWriter.close();
         } else {
-            oper = "=";
-            System.out.println(oper);
+            fileWriter.write("YES");
+            fileWriter.close();
         }
     }
+
 }
 
