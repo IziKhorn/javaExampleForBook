@@ -15,8 +15,11 @@ public class Main {
         Calzone calzone = new Calzone.Builder().addTopping(HAM).sauceInside().build();
 
         Example example = new Example();
-
         example.example_2();
+//        char[] arr = "1234567891".toCharArray();
+//        for (char c : arr) {
+//            System.out.println(Character.getNumericValue(c));
+//        }
 
 
     }
