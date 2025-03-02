@@ -32,6 +32,52 @@ public class Example {
     }
 
 
+
+//    Требуется сложить два целых числа А и В.
+
+    public static void example_2() throws IOException {
+
+        Scanner in = new Scanner(System.in);
+
+        String a_Str =  in.nextLine();
+        String b_Str =  in.nextLine();
+        in.close();
+        File inputFile = new File("G:\\projects\\javaExample\\javaExampleForBook\\src\\example_1000\\A+B.txt");
+        FileWriter writer = new FileWriter(inputFile);
+        writer.write(a_Str);
+        writer.write(b_Str);
+        writer.close();
+
+        FileReader fin = new FileReader(inputFile);
+        Scanner reader = new Scanner(fin);
+        String str = reader.nextLine();
+        String[] values = str.split("");
+        int a = Integer.parseInt(values[0]);
+        int b = Integer.parseInt(values[1]);
+        FileWriter sums = new FileWriter("G:\\projects\\javaExample\\javaExampleForBook\\src\\example_1000\\summ.txt");
+        int sum = a+b;
+        String summ = String.valueOf(sum);
+
+        sums.write(summ);
+        sums.close();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
     public static void main(String[] args) {
 
 

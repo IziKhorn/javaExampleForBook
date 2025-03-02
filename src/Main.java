@@ -16,7 +16,7 @@ public class Main {
 
         Example example = new Example();
 
-        example.example_1();
+        example.example_2();
 
 
     }
